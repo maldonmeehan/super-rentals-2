@@ -13,7 +13,7 @@ export default Ember.Route.extend({
       newRental.save();
       this.transitionTo('index');
     },
-    save4(params) {
+    saveCity(params) {
       var newCity = this.store.createRecord('city', params);
       newCity.save();
       this.transitionTo('index');
