@@ -11,7 +11,7 @@ export default Ember.Component.extend({
         owner: this.get('owner'),
         city: this.get('city'),
         type: this.get('type'),
-        image: this.get('image'),
+        image: this.get('image') ? this.get('image'):"http://kingofwallpapers.com/house/house-026.jpg",
         bedrooms: this.get('bedrooms'),
       };
       this.set('addNewRental', false);
