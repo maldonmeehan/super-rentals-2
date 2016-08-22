@@ -6,6 +6,7 @@ export default Ember.Component.extend({
     rentalFormShow() {
       this.set('addNewRental', true);
     },
+
     save1() {
       var params = {
         owner: this.get('owner'),
@@ -13,6 +14,7 @@ export default Ember.Component.extend({
         type: this.get('type'),
         image: this.get('image') ? this.get('image'):"http://kingofwallpapers.com/house/house-026.jpg",
         bedrooms: this.get('bedrooms'),
+        cost: parseInt(this.get('cost'))
       };
       this.set('addNewRental', false);
       this.sendAction('save2', params);
